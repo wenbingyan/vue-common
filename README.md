@@ -1,4 +1,4 @@
-# ross-vue-common
+# ross-vue
 
 > A ui project for vue
 
@@ -6,11 +6,11 @@
 
 ``` bash
 # install 
-npm install ross-vue-common --save
+npm install ross-vue --save
 ```
 ```js
 // use in main.js
-import Ross from 'ross-vue-common'
+import Ross from 'ross-vue'
 
 Vue.use(Ross)
 
