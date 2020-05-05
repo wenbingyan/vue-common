@@ -1,0 +1,8 @@
+@charset "utf-8";
+@import 'src/common/var';
+.star-button{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+}
