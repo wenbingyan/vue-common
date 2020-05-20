@@ -7,7 +7,6 @@ import Ross from '@/plugin'
 Vue.use(Ross)
 
 import '@/assets/css/base.css'
-
 new Vue({
   el: '#app',
   router,

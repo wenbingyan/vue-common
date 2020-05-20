@@ -3,7 +3,7 @@
         <div class="example-button-type">
             <div class="example-button-title">按钮类型</div>
             <div class="example-button-list">
-                <ross-button>默认按钮</ross-button>
+                <ross-button @click="test">默认按钮11</ross-button>
                 <ross-button type="primary">主要按钮</ross-button>
             </div>
         </div>
@@ -34,7 +34,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods:{
+    test(){
+      console.log(a)
+    }
+  }
+};
 </script>
 
 <style lang='scss'>

@@ -44,7 +44,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        options: {
+          plugins: ['syntax-dynamic-import']
+        }
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -65,7 +68,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
