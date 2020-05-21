@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from "@/examples/Index"
 import Layout from "@/examples/components/layout"
-import Button from "@/examples/Button"
 
 Vue.use(Router)
 
@@ -15,11 +14,39 @@ export default new Router({
       children:[
         {
           path: '/button',
-          component: () => import('@/examples/Button'),
+          component: () => import('@/examples/page/Button'),
         },
         {
           path: '/table',
-          component: () => import('@/examples/table'),
+          component: () => import('@/examples/page/Table'),
+        },
+        {
+          path: '/filtertable',
+          component: () => import('@/examples/page/FilterTable'),
+        },
+        {
+          path: '/imgcard',
+          component: () => import('@/examples/page/ImgCard'),
+        },
+        {
+          path: '/infolayout',
+          component: () => import('@/examples/page/InfoLayout'),
+        },
+        {
+          path: '/infolist',
+          component: () => import('@/examples/page/InfoList'),
+        },
+        {
+          path: '/searchfilter',
+          component: () => import('@/examples/page/SearchFilter'),
+        },
+        {
+          path: '/tabsbar',
+          component: () => import('@/examples/page/Tabsbar'),
+        },
+        {
+          path: '/titleline',
+          component: () => import('@/examples/page/TitleLine'),
         }
       ]
     }

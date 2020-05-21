@@ -3,7 +3,7 @@
     <div class="b-table-wrapper">
       <!--表格-->
       <el-table
-        :border="border"
+        :border="false"
         :cell-style="handleCellStyle"
         :data="data"
         :highlight-current-row="type.single"
@@ -115,7 +115,7 @@
   import TableColum from './TableColum.vue'
 
   export default {
-    name: 'tree-grid',
+    name: 'table',
     components: {TableColum},
     props: {
       // 表格loading状态
@@ -164,7 +164,7 @@
       resizable: {
         type: Boolean,
         default () {
-          return true
+          return false
         }
       },
       // pagination：显示分页，multi：多选，single：单选
@@ -381,5 +381,10 @@
   .b-table-wrapper {
       height: calc(100% - 60px);
     }
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 </style>

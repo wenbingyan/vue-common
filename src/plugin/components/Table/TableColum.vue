@@ -7,7 +7,7 @@
     :min-width="column.minWidth"
     :prop="column.fieldName"
     :resizable="resizable"
-    :show-overflow-tooltip="true"
+    :show-overflow-tooltip="false"
     :sortable="column.sortable"
     :width="column.width"
   >
@@ -29,7 +29,7 @@
       <slot :column="column" :index="scope.$index" :name="column.fieldName  + '_header'" :row="scope.row" :scope="scope"
             v-if="column.header_slot"></slot>
       <!--默认-->
-      <span v-else>{{column.titleName}}</span>
+      <div v-else>{{column.titleName}}</div>
     </template>
     <!--相关列数据-->
     <!--没有多级表头/最后一级则正常渲染列数据-->
@@ -38,9 +38,9 @@
       <slot :column="column" :index="scope.$index" :name="column.fieldName  + '_body'" :row="scope.row" :scope="scope"
             v-if="column.body_slot"></slot>
       <!--表格列内容渲染 文字-->
-      <span v-else>
+      <div v-else>
             {{scope.row[column.fieldName]}}
-      </span>
+      </div>
     </template>
   </el-table-column>
 </template>

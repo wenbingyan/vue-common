@@ -66,23 +66,6 @@ em {
   font-style: normal;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 5px;
-}
-
-table th {
-  font-weight: inherit;
-  border-bottom-width: 2px;
-  border-bottom-color: #ccc;
-}
-
 img {
   border: 0 none;
   width: auto\9;
@@ -198,4 +181,10 @@ textarea {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.example-title{
+  margin: 55px 0 20px;
+  font-size: 22px;
+  font-weight: 400;
 }

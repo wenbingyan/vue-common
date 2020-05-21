@@ -1,7 +1,7 @@
 {
   "name": "ross-vue",
   "description": "vue commo components",
-  "version": "1.1.6",
+  "version": "1.1.9",
   "author": "ross",
   "main": "lib/ross.js",
   "license": "MIT",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@sentry/browser": "^5.15.5",
     "@sentry/integrations": "^5.15.5",
+    "element-ui": "^2.13.2",
     "html-webpack-plugin": "^3.2.0",
     "postcss-loader": "^3.0.0",
     "url-loader": "^2.1.0",
