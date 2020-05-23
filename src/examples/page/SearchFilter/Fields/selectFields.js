@@ -1,0 +1,16 @@
+export default [
+    {name:'disabled',explain:'是否禁用',type:'Boolean',default: 'false'},
+    {name:'clearable',explain:'是否可以清空选项',type:'Boolean',default: 'false'},
+    {name:'filterable',explain:'是否可搜索',type:'Boolean',default: 'false'},
+    {name:'placeholder',explain:'输入框默认占位文本',type:'string',default: '-'},
+    {name:'options',explain:'下拉选项,必传',type:'array',default: '-'},
+    {name:'optionsProps',explain:'当前下拉选项配置 {label:显示文本值,value:当前选项绑定值}',type:'object',default: '{label: label,value: value}'},
+    {name:'multiple',explain:'是否多选',type:'Boolean',default: 'false'},
+    {name:'collapseTags',explain:'多选时是否将选中值按文字的形式展示',type:'Boolean',default: 'true'},
+    {name:'remote',explain:'是否为远程搜索',type:'Boolean',default: 'false'},
+    {name:'loading',explain:'是否正在从远程获取数据',type:'Boolean',default: 'false'},
+    {name:'remoteMethod',explain:'远程搜索方法',type:'Function',default: '-'},
+    {name:'focus',explain:'当input获得焦点时触发',type:'Function',default: '-'},
+    {name:'visibleChange',explain:'下拉框出现/隐藏时触发',type:'Function',default: '-'},
+    {name:'change',explain:'选中值发生变化时触发',type:'Function',default: '-'},
+]

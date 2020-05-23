@@ -22,7 +22,6 @@
         @row-dblclick="handleRowDblclick"
         @selection-change="handleSelectionChange"
         @sort-change="sortChange"
-        height="100%"
         ref="table"
         size="medium"
         v-loading="loading"
@@ -53,7 +52,7 @@
         <!--左侧序号等列-->
 
         <!--表格内容-->
-        <template v-if="data && data.length">
+        <template>
           <table-colum
             :align="align"
             :column="column"
@@ -375,6 +374,9 @@
 }
 .el-table .ascending .sort-caret.ascending {
     border-bottom-color: #fff;
+}
+.el-table__body-wrapper{
+  height: 100%;
 }
 .b-table{
   height: 100%;

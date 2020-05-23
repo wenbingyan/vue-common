@@ -12,10 +12,16 @@
         :columns="tableHeader"
         :dataSource="tableData"
         :info="tableInfo"
-        :type="{pagination:true,operationColumn:true}"
+        :type="tableType"
       >
-        <template slot="operationColumn">
-            <slot name="tableOperation"></slot>
+        <template slot="operationColumn" slot-scope="{scope,index,column}">
+            <slot name="operationColumn" :column="column" :index="index"  :row="scope.row" :scope="scope" ></slot>
+         </template>
+         <template slot="name_body" slot-scope="{scope,index,column}">
+            <slot name="name_body" :column="column" :index="index"  :row="scope.row" :scope="scope"></slot>
+         </template>
+         <template slot="name_header" slot-scope="{scope,index,column}">
+            <slot name="name_header" :column="column" :index="index"  :row="scope.row" :scope="scope"></slot>
          </template>
       </BTable>
     </el-card>
@@ -63,6 +69,7 @@ export default {
         return false
       }
     },
+    // 表格标题
     tableTitle: {
       type: String,
       default(){
@@ -77,7 +84,9 @@ export default {
     // 表格数据
     tableData: {
       type: Array,
-      required: true
+      default(){
+        return []
+      }
     },
     // 表格页码信息
     tableInfo: {
@@ -85,10 +94,19 @@ export default {
       default(){
         return {}
       }
+    },
+    tableType: {
+      type: Object,
+      default () {
+        return {
+          pagination: true,
+          multi: false,
+          single: false,
+          operationColumn: false,
+          showSummary: false
+        }
+      }
     }
-  },
-  created() {
-    console.log(this.$slots,'this.$slots')
   },
   data() {
     return {

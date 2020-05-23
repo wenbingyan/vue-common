@@ -12,15 +12,19 @@
       :tableInfo="tableInfo"
     >
     </ross-FilterTable>
+    <Attribute title='InfoList Attribute' :dataSource="AttributeFields" />
   </div>
 </template>
 
 <script>
-import myfileds from './fileds.js'
-import HeaderColumn from './columnFields'
+import myfileds from './Fields/fileds.js'
+import HeaderColumn from './Fields/columnFields'
+import Attribute from '../../components/Attribute'
+import AttributeFields from './Fields/attribute'
 
 export default {
   name: 'filterTable',
+  components:{ Attribute },
   data () {
     return {
       list: [],
@@ -39,7 +43,8 @@ export default {
         {name: '李四', sex: '男', date: '2010-10-12', adress: '北京'},
         {name: '王五', sex: '男', date: '2010-10-12', adress: '北京'}
       ],
-      tableInfo: {pageNum: 1, pageSize: 10, total: 3}
+      tableInfo: {pageNum: 1, pageSize: 10, total: 3},
+      AttributeFields
     }
   },
   methods: {

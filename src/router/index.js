@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from "@/examples/Index"
 import Layout from "@/examples/components/layout"
 
 Vue.use(Router)
@@ -12,10 +11,6 @@ export default new Router({
       name: 'Index',
       component: Layout,
       children:[
-        {
-          path: '/button',
-          component: () => import('@/examples/page/Button'),
-        },
         {
           path: '/table',
           component: () => import('@/examples/page/Table'),

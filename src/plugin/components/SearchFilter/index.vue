@@ -30,7 +30,7 @@
               :disabled="item.props.disabled"
               :editable="item.props.editable"
               :model.sync="formData[item.model]"
-              :pickerOptions="item.pickerOptions"
+              :pickerOptions="item.props.pickerOptions"
               :type="item.dateType"
               :valueFormat="item.valueFormat"
               ></SearchDatepicker>
@@ -48,7 +48,7 @@
                 :model.sync="formData[item.model]"
                 :modelKey="item.model"
                 :multiple="item.props.multiple"
-                :options="item.options"
+                :options="item.props.options"
                 :optionsProps="item.props.optionsProps"
                 :valueKey="item.props.valueKey"
                 :visibleChange="item.props.visibleChange"
@@ -62,7 +62,7 @@
                 :falseLabel="item.props.falseLabel"
                 :indeterminate="item.props.indeterminate"
                 :model.sync="formData[item.model]"
-                :options="item.options"
+                :options="item.props.options"
                 :optionsProps="item.props.optionsProps"
                 :trueLabel="item.props.trueLabel"
               ></SearchCheckbox>
@@ -79,7 +79,7 @@
                 :showAllLevels="item.props.showAllLevels"
                 :model.sync="formData[item.model]"
                 :modelKey="item.model"
-                :options="item.options"
+                :options="item.props.options"
               ></SearchCascader>
         </el-form-item>
         <!-- <el-form-item prop="datetypeData">

@@ -1,5 +1,4 @@
 const list = [
-    {label:'button',path:'button'},
     {label:'table',path:'table'},
     {label:'searchfilter',path:'searchfilter'},
     {label:'filtertable',path:'filtertable'},

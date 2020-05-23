@@ -1,7 +1,7 @@
 <template>
   <div class="side">
-    <div class="side-item" :key="index" v-for="(item,index) in MenuList">
-      <router-link :to="`/${item.path}`" class="nav-link">{{item.label}}</router-link>
+    <div :class="active === `/${item.path}`?'side-item active':'side-item'" :key="index" v-for="(item,index) in MenuList">
+      <div @click="go(item.path)"  class="nav-link">{{item.label}}</div>
     </div>
   </div>
 </template>
@@ -11,7 +11,19 @@ import MenuList from './menu'
 export default {
   data(){
     return {
-      MenuList
+      MenuList,
+      active: this.$route.path
+    }
+  },
+  created(){
+    this.active = this.$route.path
+  },
+  methods:{
+    go(path){
+      this.active = `/${path}`
+      this.$router.push({
+　　　　　　path
+　　　　})
     }
   }
 };
@@ -30,14 +42,18 @@ export default {
     &-item .nav-link{
       height: 40px;
       color: #444;
-      line-height: 60px;
       font-size: 14px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       font-weight: 400;
+      padding: 10px 0;
+      cursor: pointer;
     }
     &-item .nav-link:hover{
+      color: #409eff;
+    }
+    &-item.active .nav-link{
       color: #409eff;
     }
 }

@@ -29,7 +29,7 @@
       <slot :column="column" :index="scope.$index" :name="column.fieldName  + '_header'" :row="scope.row" :scope="scope"
             v-if="column.header_slot"></slot>
       <!--默认-->
-      <div v-else>{{column.titleName}}</div>
+      <span v-else>{{column.titleName}}</span>
     </template>
     <!--相关列数据-->
     <!--没有多级表头/最后一级则正常渲染列数据-->
@@ -38,9 +38,9 @@
       <slot :column="column" :index="scope.$index" :name="column.fieldName  + '_body'" :row="scope.row" :scope="scope"
             v-if="column.body_slot"></slot>
       <!--表格列内容渲染 文字-->
-      <div v-else>
+      <span v-else>
             {{scope.row[column.fieldName]}}
-      </div>
+      </span>
     </template>
   </el-table-column>
 </template>

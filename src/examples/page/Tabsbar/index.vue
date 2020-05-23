@@ -1,12 +1,16 @@
 <template>
   <div class="Tabsbar">
     <ross-Tabsbar :tabList="tabList" v-model="tabStatus"  @handlerChange="getList" />
+    <Attribute title='Tabsbar Attribute' :dataSource="AttributeFields" />
   </div>
 </template>
 
 <script>
+import Attribute from '../../components/Attribute'
+import AttributeFields from './Fields/attribute'
 export default {
   name: 'Tabs',
+  components:{ Attribute },
   data(){
     return {
       tabStatus: 'enterprises',
@@ -14,6 +18,7 @@ export default {
       twoNum: 0,
       threeNum: 0,
       fourNum: 0,
+      AttributeFields
     }
   },
   computed: {

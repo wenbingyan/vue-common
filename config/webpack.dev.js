@@ -63,6 +63,10 @@ module.exports = {
           limit: 10000,
         }
       },
+      {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader'
+      }
     ]
   },
   resolve: {

@@ -37,9 +37,11 @@ export default {
     }
   },
   props: {
+    // 图片地址
     urls: {
       type: String
     },
+    // 图片标题
     title: {
       type: String
     }
